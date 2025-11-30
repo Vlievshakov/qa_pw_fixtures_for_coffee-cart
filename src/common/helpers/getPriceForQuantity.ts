@@ -1,4 +1,4 @@
-export function unitPriceFormatStr(unitPrice: number, unitsNumber: string) {
+export function unitPriceFormatStr(unitPrice: number, unitsNumber: number) {
   let count = Number(unitsNumber);
   let num  = Number(unitPrice);
   if (!Number.isFinite(num)) {
