@@ -8,7 +8,7 @@ export function unitPriceFormatStr(unitPrice: number, unitsNumber: string) {
   return `${formatted} x ${count}`;
 }
 
-export function priceFormatStr (unitPrice: string) {
+export function priceFormatStr (unitPrice: number) {
   let num  = Number(unitPrice);
   if (!Number.isFinite(num)) {
     num = 0;
@@ -18,5 +18,5 @@ export function priceFormatStr (unitPrice: string) {
 }
 
 export function totalPriceFormatStr(unitsNumber: number) {
-  return `Total: $${unitsNumber}.00`;
+  return `Total: $${unitsNumber.toFixed(2)}`;
 }
