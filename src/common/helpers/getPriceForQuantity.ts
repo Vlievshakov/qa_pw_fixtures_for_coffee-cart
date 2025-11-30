@@ -1,0 +1,22 @@
+export function unitPriceFormatStr(unitPrice: number, unitsNumber: string) {
+  let count = Number(unitsNumber);
+  let num  = Number(unitPrice);
+  if (!Number.isFinite(num)) {
+    num = 0;
+  }
+  let formatted = num.toFixed(2)
+  return `${formatted} x ${count}`;
+}
+
+export function priceFormatStr (unitPrice: string) {
+  let num  = Number(unitPrice);
+  if (!Number.isFinite(num)) {
+    num = 0;
+  }
+  let formatted = num.toFixed(2)
+  return `$${formatted}`;
+}
+
+export function totalPriceFormatStr(unitsNumber: number) {
+  return `Total: $${unitsNumber}.00`;
+}
